@@ -25,10 +25,12 @@ body {
 }
 
 .cover img {
-    width: 70%;
-    max-width: 400px;
+    width: 75%;
+    max-width: 450px;
 }
-
+.lang-btn {
+    display: none;
+    }
 /* DİL BUTONU */
 .lang-btn {
     position: fixed;
@@ -111,7 +113,7 @@ body {
 function openMenu() {
     document.getElementById("cover").style.display = "none";
     document.getElementById("menu").classList.add("show");
-}
+document.querySelector(".lang-btn").style.display = "block";}
 
 function toggleLang() {
     var tr = document.getElementById("tr");
