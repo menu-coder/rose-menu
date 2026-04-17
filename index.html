@@ -9,63 +9,103 @@
 body {
     margin: 0;
     background: #f5f2eb;
+    font-family: Arial;
 }
 
-/* LOGO SABİT */
+/* HEADER */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
     background: #f5f2eb;
     text-align: center;
-    padding: 12px 0;
+    padding: 10px 0;
     z-index: 1000;
 }
 
 .logo {
-    width: 110px;
+    width: 100px;
 }
 
-/* MENÜ */
+/* BUTTON */
+.lang-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* CONTENT */
 .content {
     margin-top: 100px;
 }
 
-/* GÖRSELLER - NET */
 .menu-img {
     width: 100%;
-    height: auto;
-    image-rendering: auto; /* blur engeller */
     display: block;
-}
-
-/* KALİTE ARTTIRMA */
-img {
-    max-width: 100%;
-    height: auto;
 }
 </style>
 </head>
 
 <body>
 
+<!-- LANGUAGE BUTTON -->
+<div class="lang-btn" onclick="toggleLang()">EN</div>
+
+<!-- LOGO -->
 <div class="header">
     <img src="logo.png" class="logo">
 </div>
 
-<div class="content">
-
-<img src="kahvalti.png" class="menu-img">
-<img src="tost.png" class="menu-img">
-<img src="et-bowl.png" class="menu-img">
-<img src="tavuk-bowl.png" class="menu-img">
-<img src="balik-bowl.png" class="menu-img">
-<img src="vegan-bowl.png" class="menu-img">
-<img src="salata.png" class="menu-img">
-<img src="tatli.png" class="menu-img">
-<img src="icecek.png" class="menu-img">
-
+<!-- TÜRKÇE -->
+<div id="tr" class="content">
+    <img src="kahvalti.png" class="menu-img">
+    <img src="tost.png" class="menu-img">
+    <img src="et-bowl.png" class="menu-img">
+    <img src="tavuk-bowl.png" class="menu-img">
+    <img src="balik-bowl.png" class="menu-img">
+    <img src="vegan-bowl.png" class="menu-img">
+    <img src="salata.png" class="menu-img">
+    <img src="tatli.png" class="menu-img">
+    <img src="icecek.png" class="menu-img">
 </div>
+
+<!-- ENGLISH -->
+<div id="en" class="content" style="display:none;">
+    <img src="kahvalti-en.png" class="menu-img">
+    <img src="tost-en.png" class="menu-img">
+    <img src="et-bowl-en.png" class="menu-img">
+    <img src="tavuk-bowl-en.png" class="menu-img">
+    <img src="balik-bowl-en.png" class="menu-img">
+    <img src="vegan-bowl-en.png" class="menu-img">
+    <img src="salata-en.png" class="menu-img">
+    <img src="tatli-en.png" class="menu-img">
+    <img src="icecek-en.png" class="menu-img">
+</div>
+
+<script>
+function toggleLang() {
+    var tr = document.getElementById("tr");
+    var en = document.getElementById("en");
+    var btn = document.querySelector(".lang-btn");
+
+    if (tr.style.display === "none") {
+        tr.style.display = "block";
+        en.style.display = "none";
+        btn.innerText = "EN";
+    } else {
+        tr.style.display = "none";
+        en.style.display = "block";
+        btn.innerText = "TR";
+    }
+}
+</script>
 
 </body>
 </html>
