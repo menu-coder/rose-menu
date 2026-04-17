@@ -111,24 +111,25 @@ body {
 
 <script>
 function openMenu() {
-    document.getElementById("cover").style.display = "none";
-    document.getElementById("menu").classList.add("show");
-document.querySelector(".lang-btn").style.display = "block";}
+  document.getElementById("cover").style.display = "none";
+  document.getElementById("menu").classList.add("show");
+  document.querySelector(".lang-btn").style.display = "block";
+}
 
 function toggleLang() {
-    var tr = document.getElementById("tr");
-    var en = document.getElementById("en");
-    var btn = document.querySelector(".lang-btn");
+  var tr = document.getElementById("tr");
+  var en = document.getElementById("en");
+  var btn = document.querySelector(".lang-btn");
 
-    if (tr.style.display === "none") {
-        tr.style.display = "block";
-        en.style.display = "none";
-        btn.innerText = "EN";
-    } else {
-        tr.style.display = "none";
-        en.style.display = "block";
-        btn.innerText = "TR";
-    }
+  if (tr.style.display === "none") {
+    tr.style.display = "block";
+    en.style.display = "none";
+    btn.innerText = "EN";
+  } else {
+    tr.style.display = "none";
+    en.style.display = "block";
+    btn.innerText = "TR";
+  }
 }
 </script>
 
