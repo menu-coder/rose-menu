@@ -3,174 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rose Fit & Fresh</title>
+<title>Rose Fit Menü</title>
 
 <style>
 body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#f9f7f2;
-    color:#2f4f2f;
+    margin: 0;
+    background: #f5f2eb;
+    font-family: Arial, sans-serif;
 }
 
-/* HEADER */
+/* SABİT HEADER */
 .header {
-    text-align:center;
-    padding:30px 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(245, 242, 235, 0.95);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
+/* LOGO */
 .logo {
-    width:100px;
+    width: 120px;
 }
 
-h1 {
-    margin:10px 0 0;
-    font-size:32px;
+/* İÇERİĞİ AŞAĞI İT */
+.content {
+    margin-top: 100px;
 }
 
-.tagline {
-    color:#6a8a6a;
+/* MENU SECTION */
+.menu-section {
+    position: relative;
 }
 
-/* SECTION */
-.section {
-    margin:25px 12px;
+/* IMAGE */
+.menu-section img {
+    width: 100%;
+    display: block;
 }
 
-.section img {
-    width:100%;
-    border-radius:16px;
-    margin-bottom:10px;
-}
-
-/* CARD */
-.card {
-    background:white;
-    padding:15px;
-    border-radius:14px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.05);
-}
-
-.item {
-    display:flex;
-    justify-content:space-between;
-    padding:10px 0;
-    border-bottom:1px solid #eee;
-    font-size:15px;
-}
-
-.item:last-child {
-    border-bottom:none;
-}
-
-.price {
-    font-weight:600;
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    padding: 8px 15px;
+    border-radius: 10px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- SABİT LOGO -->
 <div class="header">
-<img src="logo.png" class="logo">
-<h1>Rose</h1>
-<div class="tagline">fit & fresh</div>
+    <img src="logo.png" class="logo">
 </div>
 
-<!-- KAHVALTI -->
-<div class="section">
-<img src="kahvalti.png">
-<div class="card">
-<div class="item"><span>Protein Kahvaltı</span><span class="price">350₺</span></div>
-<div class="item"><span>Fit Başlangıç</span><span>350₺</span></div>
-<div class="item"><span>Akdeniz Tabak</span><span>330₺</span></div>
-<div class="item"><span>Vegan Tabak</span><span>340₺</span></div>
-</div>
+<div class="content">
+
+<div class="menu-section">
+    <img src="kahvalti.png">
+    <div class="overlay">Kahvaltı</div>
 </div>
 
-<!-- TOST -->
-<div class="section">
-<img src="tost.png">
-<div class="card">
-<div class="item"><span>Avokadolu Tost</span><span>320₺</span></div>
-<div class="item"><span>Protein Tost</span><span>330₺</span></div>
-<div class="item"><span>Tavuklu Tost</span><span>350₺</span></div>
-<div class="item"><span>Sebzeli Tost</span><span>300₺</span></div>
-<div class="item"><span>Fit Tavuk Sandviç</span><span>320₺</span></div>
-<div class="item"><span>Ton Balıklı Sandviç</span><span>280₺</span></div>
-</div>
+<div class="menu-section">
+    <img src="tost.png">
+    <div class="overlay">Tost & Sandviç</div>
 </div>
 
-<!-- BALIK BOWL -->
-<div class="section">
-<img src="balikbowl.png">
-<div class="card">
-<div class="item"><span>Akdeniz Somon Bowl</span><span>650₺</span></div>
-<div class="item"><span>Somon Enerji Bowl</span><span>700₺</span></div>
-<div class="item"><span>Ton Protein Bowl</span><span>575₺</span></div>
-</div>
+<div class="menu-section">
+    <img src="balik-bowl.png">
+    <div class="overlay">Balık Bowl</div>
 </div>
 
-<!-- ET BOWL -->
-<div class="section">
-<img src="etbowl.png">
-<div class="card">
-<div class="item"><span>Izgara Dana Bowl</span><span>620₺</span></div>
-<div class="item"><span>Avokado Et Bowl</span><span>600₺</span></div>
-<div class="item"><span>Basmati Bowl</span><span>650₺</span></div>
-<div class="item"><span>Et & Patates Bowl</span><span>610₺</span></div>
-</div>
+<div class="menu-section">
+    <img src="et-bowl.png">
+    <div class="overlay">Et Bowl</div>
 </div>
 
-<!-- TAVUK -->
-<div class="section">
-<img src="tavukbowl.png">
-<div class="card">
-<div class="item"><span>Burrito Bowl</span><span>620₺</span></div>
-<div class="item"><span>Ballı Hardal Tavuk</span><span>640₺</span></div>
-<div class="item"><span>Hibachi Tavuk</span><span>650₺</span></div>
-<div class="item"><span>Tikka Tavuk</span><span>660₺</span></div>
-<div class="item"><span>Susamlı Tavuk</span><span>660₺</span></div>
-<div class="item"><span>Sriracha Tavuk</span><span>680₺</span></div>
-</div>
+<div class="menu-section">
+    <img src="tavuk-bowl.png">
+    <div class="overlay">Tavuk Bowl</div>
 </div>
 
-<!-- SALATA -->
-<div class="section">
-<img src="salata.png">
-<div class="card">
-<div class="item"><span>Sezar Tavuk Salata</span><span>400₺</span></div>
-<div class="item"><span>Akdeniz Salata</span><span>360₺</span></div>
-<div class="item"><span>Ton Balıklı Salata</span><span>380₺</span></div>
-<div class="item"><span>Mevsim Salata</span><span>320₺</span></div>
-</div>
+<div class="menu-section">
+    <img src="vegan-bowl.png">
+    <div class="overlay">Vegan Bowl</div>
 </div>
 
-<!-- TATLI -->
-<div class="section">
-<img src="tatli.png">
-<div class="card">
-<div class="item"><span>Fit Brownie</span><span>350₺</span></div>
-<div class="item"><span>Çilekli Parfe</span><span>270₺</span></div>
-<div class="item"><span>Fırın Elma</span><span>330₺</span></div>
-<div class="item"><span>Fit Cheesecake</span><span>350₺</span></div>
-</div>
+<div class="menu-section">
+    <img src="salata.png">
+    <div class="overlay">Salatalar</div>
 </div>
 
-<!-- ICECEK -->
-<div class="section">
-<img src="icecek.png">
-<div class="card">
-<div class="item"><span>Su</span><span>75₺</span></div>
-<div class="item"><span>Çay</span><span>55₺</span></div>
-<div class="item"><span>Soda</span><span>100₺</span></div>
-<div class="item"><span>Ayran</span><span>90₺</span></div>
-<div class="item"><span>Diyet Kola</span><span>135₺</span></div>
-<div class="item"><span>Taze Meyve Suyu</span><span>230₺</span></div>
-<div class="item"><span>Limonata</span><span>190₺</span></div>
-<div class="item"><span>Türk Kahvesi</span><span>140₺</span></div>
-<div class="item"><span>Americano</span><span>180₺</span></div>
+<div class="menu-section">
+    <img src="tatli.png">
+    <div class="overlay">Tatlılar</div>
 </div>
+
+<div class="menu-section">
+    <img src="icecek.png">
+    <div class="overlay">İçecekler</div>
+</div>
+
 </div>
 
 </body>
