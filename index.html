@@ -9,7 +9,6 @@
 body {
     margin: 0;
     background: #f5f2eb;
-    font-family: Arial, sans-serif;
 }
 
 /* LOGO SABİT */
@@ -20,7 +19,6 @@ body {
     background: #f5f2eb;
     text-align: center;
     padding: 12px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     z-index: 1000;
 }
 
@@ -28,62 +26,44 @@ body {
     width: 110px;
 }
 
-/* MENÜ ALANI */
+/* MENÜ */
 .content {
     margin-top: 100px;
 }
 
-/* GÖRSELLER */
+/* GÖRSELLER - NET */
 .menu-img {
     width: 100%;
+    height: auto;
+    image-rendering: auto; /* blur engeller */
     display: block;
 }
 
-/* MOBİL OPTİMİZASYON */
-@media (max-width: 600px) {
-    .logo {
-        width: 90px;
-    }
+/* KALİTE ARTTIRMA */
+img {
+    max-width: 100%;
+    height: auto;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGO -->
 <div class="header">
     <img src="logo.png" class="logo">
 </div>
 
-<!-- MENÜ -->
 <div class="content">
 
-    <!-- Kahvaltı -->
-    <img src="kahvalti.png" class="menu-img">
-
-    <!-- Tost -->
-    <img src="tost.png" class="menu-img">
-
-    <!-- ET BOWLLAR -->
-    <img src="et-bowl.png" class="menu-img">
-
-    <!-- TAVUK BOWLLAR -->
-    <img src="tavuk-bowl.png" class="menu-img">
-
-    <!-- BALIK BOWLLAR -->
-    <img src="balik-bowl.png" class="menu-img">
-
-    <!-- VEGAN BOWLLAR -->
-    <img src="vegan-bowl.png" class="menu-img">
-
-    <!-- Salata -->
-    <img src="salata.png" class="menu-img">
-
-    <!-- Tatlı -->
-    <img src="tatli.png" class="menu-img">
-
-    <!-- İçecek -->
-    <img src="icecek.png" class="menu-img">
+<img src="kahvalti.png" class="menu-img">
+<img src="tost.png" class="menu-img">
+<img src="et-bowl.png" class="menu-img">
+<img src="tavuk-bowl.png" class="menu-img">
+<img src="balik-bowl.png" class="menu-img">
+<img src="vegan-bowl.png" class="menu-img">
+<img src="salata.png" class="menu-img">
+<img src="tatli.png" class="menu-img">
+<img src="icecek.png" class="menu-img">
 
 </div>
 
