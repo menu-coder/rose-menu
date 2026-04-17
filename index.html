@@ -12,107 +12,78 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* SABİT HEADER */
+/* LOGO SABİT */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(245, 242, 235, 0.95);
-    backdrop-filter: blur(6px);
+    background: #f5f2eb;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     z-index: 1000;
 }
 
-/* LOGO */
 .logo {
-    width: 120px;
+    width: 110px;
 }
 
-/* İÇERİĞİ AŞAĞI İT */
+/* MENÜ ALANI */
 .content {
     margin-top: 100px;
 }
 
-/* MENU SECTION */
-.menu-section {
-    position: relative;
-}
-
-/* IMAGE */
-.menu-section img {
+/* GÖRSELLER */
+.menu-img {
     width: 100%;
     display: block;
 }
 
-/* OVERLAY */
-.overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    background: rgba(0,0,0,0.4);
-    padding: 8px 15px;
-    border-radius: 10px;
+/* MOBİL OPTİMİZASYON */
+@media (max-width: 600px) {
+    .logo {
+        width: 90px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- SABİT LOGO -->
+<!-- LOGO -->
 <div class="header">
     <img src="logo.png" class="logo">
 </div>
 
+<!-- MENÜ -->
 <div class="content">
 
-<div class="menu-section">
-    <img src="kahvalti.png">
-    <div class="overlay">Kahvaltı</div>
-</div>
+    <!-- Kahvaltı -->
+    <img src="kahvalti.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="tost.png">
-    <div class="overlay">Tost & Sandviç</div>
-</div>
+    <!-- Tost -->
+    <img src="tost.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="balik-bowl.png">
-    <div class="overlay">Balık Bowl</div>
-</div>
+    <!-- ET BOWLLAR -->
+    <img src="et-bowl.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="et-bowl.png">
-    <div class="overlay">Et Bowl</div>
-</div>
+    <!-- TAVUK BOWLLAR -->
+    <img src="tavuk-bowl.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="tavuk-bowl.png">
-    <div class="overlay">Tavuk Bowl</div>
-</div>
+    <!-- BALIK BOWLLAR -->
+    <img src="balik-bowl.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="vegan-bowl.png">
-    <div class="overlay">Vegan Bowl</div>
-</div>
+    <!-- VEGAN BOWLLAR -->
+    <img src="vegan-bowl.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="salata.png">
-    <div class="overlay">Salatalar</div>
-</div>
+    <!-- Salata -->
+    <img src="salata.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="tatli.png">
-    <div class="overlay">Tatlılar</div>
-</div>
+    <!-- Tatlı -->
+    <img src="tatli.png" class="menu-img">
 
-<div class="menu-section">
-    <img src="icecek.png">
-    <div class="overlay">İçecekler</div>
-</div>
+    <!-- İçecek -->
+    <img src="icecek.png" class="menu-img">
 
 </div>
 
