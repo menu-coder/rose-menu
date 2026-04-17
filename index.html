@@ -8,26 +8,27 @@
 <style>
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
     background: #f5f2eb;
-    font-family: Arial;
 }
 
-/* HEADER */
-.header {
+/* KAPAK */
+.cover {
     position: fixed;
-    top: 0;
     width: 100%;
+    height: 100vh;
     background: #f5f2eb;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
 }
 
-.logo {
-    width: 100px;
+.cover img {
+    width: 200px;
 }
 
-/* BUTTON */
+/* DİL BUTONU */
 .lang-btn {
     position: fixed;
     top: 15px;
@@ -37,13 +38,24 @@ body {
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 12px;
+    z-index: 1500;
     cursor: pointer;
-    z-index: 2000;
 }
 
-/* CONTENT */
+/* MENÜ */
+.menu {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .content {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .menu-img {
@@ -55,13 +67,16 @@ body {
 
 <body>
 
-<!-- LANGUAGE BUTTON -->
+<!-- KAPAK -->
+<div class="cover" id="cover" onclick="openMenu()">
+    <img src="logo.png">
+</div>
+
+<!-- DİL BUTONU -->
 <div class="lang-btn" onclick="toggleLang()">EN</div>
 
-<!-- LOGO -->
-<div class="header">
-    <img src="logo.png" class="logo">
-</div>
+<!-- MENÜ -->
+<div class="menu" id="menu">
 
 <!-- TÜRKÇE -->
 <div id="tr" class="content">
@@ -89,7 +104,14 @@ body {
     <img src="icecek-en.png" class="menu-img">
 </div>
 
+</div>
+
 <script>
+function openMenu() {
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("menu").classList.add("show");
+}
+
 function toggleLang() {
     var tr = document.getElementById("tr");
     var en = document.getElementById("en");
